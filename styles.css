@@ -265,10 +265,8 @@ p {
     color: #d8ab4e !important;
 }
 
-.stat-label {
-    font-size: 0.875rem;
-    opacity: 0.9;
-    color: var(--blush) !important;
+#publications .stat-label {
+    color: #d8ab4e !important;
 }
 
 /* Professional Photo Container */
