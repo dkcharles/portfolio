@@ -9,34 +9,52 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Add Montserrat font for a modern, bold look */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-family: 'Montserrat', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     line-height: 1.6;
-    color: #1f2937;
-    background: #ffffff;
+    color: var(--deep-black);
+    background: var(--blush);
 }
 
 /* CSS Variables for Softer, More Professional Theme */
 :root {
-    --barely-green: #acb7ae;
-    --brown-shirts: #82716e;
-    --tan-blonde: #e4decd;
-    --blondey: #c2b490;
-    /* Map new colors to old variable names for compatibility */
-    --primary-blue: var(--barely-green);
-    --secondary-blue: var(--brown-shirts);
-    --light-blue: var(--tan-blonde);
-    --accent-blue: var(--blondey);
-    --soft-navy: var(--brown-shirts);
-    --ulster-red: var(--barely-green);
-    --dark-grey: #4a4a4a;
-    --medium-grey: var(--brown-shirts);
-    --light-grey: var(--tan-blonde);
-    --border-grey: var(--blondey);
-    --success-green: var(--barely-green);
-    --warning-orange: #d97706;
-    --hero-start: var(--barely-green);
-    --hero-end: var(--tan-blonde);
+    --golden-top: #d8ab4e;
+    --pastel-green-bottom: #b6e3b4;
+    --charcoal-black: #040404;
+    --background-main: #26282e;
+    /* New Color Palette Inspired by Reference */
+    --yellow: #feda6a; /* Are ya yellow?! */
+    --silver-fox: #d4d4dc;
+    --deep-matte-grey: #393f4d;
+    --dark-slate: #1d1e22;
+    --pastel-blue: #7fb8d1;
+    --hero-gradient-top: #b4d8e3;
+    --hero-gradient-bottom: #7fb8d1;
+
+    --deep-black: #172121;
+    --slate-grey: #444554;
+    --muted-purple: #7F7B82;
+    --pale-mauve: #BFACB5;
+    --blush: #E5D0CC;
+
+    /* Compatibility mappings */
+    --primary-blue: var(--slate-grey);
+    --secondary-blue: var(--muted-purple);
+    --light-blue: var(--blush);
+    --accent-blue: var(--pale-mauve);
+    --soft-navy: var(--deep-black);
+    --ulster-red: var(--blush);
+    --dark-grey: var(--deep-black);
+    --medium-grey: var(--slate-grey);
+    --light-grey: var(--pale-mauve);
+    --border-grey: var(--muted-purple);
+    --success-green: var(--pale-mauve);
+    --warning-orange: var(--blush);
+    --hero-start: var(--deep-black);
+    --hero-end: var(--slate-grey);
 }
 
 /* Typography */
@@ -176,8 +194,8 @@ p {
 
 /* Hero Section - Much Softer and More Professional */
 .hero {
-    background: linear-gradient(135deg, var(--hero-start) 0%, var(--hero-end) 100%);
-    color: white;
+    background: linear-gradient(135deg, var(--hero-start) 0%, var(--hero-end) 100%) !important;
+    color: var(--blush);
     padding: 8rem 0 6rem;
     margin-top: 70px;
     position: relative;
@@ -204,13 +222,17 @@ p {
 }
 
 .hero-text h1 {
-    font-size: 3.5rem;
+    color: var(--blush) !important;
+    text-shadow: 0 2px 16px rgba(29,30,34,0.7), 0 1px 0 var(--dark-slate);
     font-weight: 700;
+    letter-spacing: 0.01em;
+    font-size: 3.5rem;
     margin-bottom: 1rem;
     line-height: 1.2;
 }
 
 .hero-subtitle {
+    color: var(--blush) !important;
     font-size: 1.25rem;
     margin-bottom: 2rem;
     opacity: 0.95;
@@ -228,15 +250,16 @@ p {
 }
 
 .stat-number {
+    color: var(--blush) !important;
     font-size: 2rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
-    color: var(--dark-grey);
 }
 
 .stat-label {
     font-size: 0.875rem;
     opacity: 0.9;
+    color: var(--blush) !important;
 }
 
 /* Professional Photo Container */
@@ -303,12 +326,13 @@ p {
 
 /* Cards and Components */
 .card {
-    background: white;
+    background: var(--pale-mauve);
     border-radius: 0.75rem;
     padding: 2rem;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
     border: 1px solid var(--border-grey);
+    color: var(--deep-black);
 }
 
 .card:hover {
@@ -338,7 +362,7 @@ p {
 }
 
 .section-title {
-    color: var(--primary-blue);
+    color: var(--deep-black) !important;
     margin-bottom: 1rem;
 }
 
@@ -352,7 +376,7 @@ p {
 
 .section-subtitle {
     font-size: 1.125rem;
-    color: var(--medium-grey);
+    color: var(--deep-black) !important;
     max-width: 600px;
     margin: 0 auto;
 }
@@ -505,4 +529,9 @@ p {
 .fade-in.visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+#about.section {
+    background: var(--muted-purple) !important;
+    color: var(--blush);
 } 
