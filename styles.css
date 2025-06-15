@@ -37,7 +37,7 @@ body {
     --deep-black: #172121;
     --slate-grey: #444554;
     --muted-purple: #7F7B82;
-    --pale-mauve: #BFACB5;
+    --pale-mauve: #e0d2db;
     --blush: #E5D0CC;
 
     /* Compatibility mappings */
@@ -250,10 +250,19 @@ p {
 }
 
 .stat-number {
-    color: var(--blush) !important;
     font-size: 2rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
+}
+
+/* Keep blush color for hero stats only */
+.hero .stat-number {
+    color: var(--blush) !important;
+}
+
+/* Gold color for Research Metrics in Publications */
+#publications .stat-number {
+    color: #d8ab4e !important;
 }
 
 .stat-label {
@@ -534,4 +543,9 @@ p {
 #about.section {
     background: var(--muted-purple) !important;
     color: var(--blush);
+}
+
+.card h3:contains('Research Metrics') ~ .hero-stats .stat-number, /* fallback for specificity */
+#publications .stat-number {
+    color: #d8ab4e !important;
 } 
